@@ -1,0 +1,42 @@
+0. 이름
+테이블 명은 앞에 s_ 붙어있음(order 사용 불가능으로 인한 통일성, shoppingmall의 s)
+
+member : 회원 정보 (회원 가입하면 create, 마이페이지에서 update, 회원 탈퇴 시 delete)
+product 상품 정보
+review : 상세 페이지 리뷰
+qna : 상세 페이지 qna
+baket : 장바구니 (상세 페이지에서 장바구니 버튼을 누르면 create, 장바구니 페이지에서는 read, 결제하면 delete)
+order : 주문정보 (결제하면 create, 마이 페이지에서 read)
+
+1. 실행 순서
+member -> product -> 그 외 순으로 실행 하셔도 되고
+run.sql만 실행하셔도 됨
+밑의 예시처럼 경로에 secProejctDB까지의 경로를 폴더에서 복사해서 붙이기만 하면 됩니다
+(ctrl+f -> 경로 -> 맨 오른쪽 바꾸기 버튼 -> 밑에 본인 경로 붙이기 -> 모두 바꾸기 해도 됩니다)
+
+2. 구조
+member는 id가 pk
+product는 productno가 pk, id가 fk
+
+seller,baket,order는 id, productno 둘 다 fk
+review, qna는 prodcutno가 fk
+
+3. 참조 과정 예시
+
+1) 마이페이지(주문 배송)
+order에서 id를 통해 주문 내역 부르기
+id를 통해 판매자명 호출
+productno을 통해 이미지, 상품명 호출
+
+-> 배송비는 넣어놓기는 했는데 가격이랑 배송비가 어떻게 되는건지 모르겠네요
+가격 = 상품가격+배송비인지 아니면 상품가격만인지
+후자면 totalprice도 필요없어지고 전자면 배송비가 필요없어서요
+
+2) 상품 검색 화면
+'검색어' 검색
+select ~ from product where productname like '%검색어'
+검색된거 출력
+
+3) 장바구니
+baket에서 id를 통해 장바구니 내역 부르기
+productno을 통해 사진명, 상품명, 가격 호출

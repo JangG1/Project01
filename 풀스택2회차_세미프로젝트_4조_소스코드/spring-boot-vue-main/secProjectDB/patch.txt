@@ -1,0 +1,33 @@
+패치 노트
+date : 2022-01-28 11:19
+임시 데이터 실제 데이터로 변경
+
+date : 2022-01-26 23:44
+member에 seller를 authority로 바꿔서 admin, seller, user로 나누었음 (spring security 사용하기 위해)
+review에 누락됐던 on delete cascade 추가(fk의 원본이 삭제되면 같이 삭제되는 용도)
+자잘한 데이터 추가
+
+date : 2022-01-25 17:25
+order에 seller(닉네임) 추가
+product에 id를 sellerid로 이름 변경
+
+date : 2022-01-21 23:07
+product에 상품 종류(ptype) 추가
+
+
+date : 2022-01-19 17:38
+order에 주문자 배송지 입력을 위한 자료들 추가
+편한 실행을 위해 run.sql 추가(자세한 사용법은 사용 방법.txt에)
+
+date : 2022-01-19 16:28
+product에 판매 여부(onsale) 추가
+order에 상태(state) 추가 / 결제 완료(default / 아예 입력 안할 시 작동), 배송 중, 배송 완료, 취소 요청, 취소 완료
+
+date : 2022-01-18 20:46
+order, basket, seller에 구분을 위한 idx 추가됨
+
+mysql의 auto increment처럼 sequence로 추가되어있으니 insert 하실 때 seq이름.nextval을 idx 자리에 넣으시면 됩니다
+아마 order basket 추가 쪽은 제가 할 부분이라 신경 안쓰셔도 되긴 할거에요
+대신 마이페이지에 order 관련해서 vo 짜놓으신게 있다면 idx 하나 long 타입으로 추가하셔야됩니다
+seller 탭은 회원가입 시 쓰려고 하긴 했는데 일단은 지금으로선 딱히 효용이 안보이긴 해서 지울 수도 있습니다. 일단은 혹시 몰라서 냅둔거라 셀러 회원가입에서 필요하면 쓰세요
+근데 셀러 회원가입 달라지는게 사업자등록번호인데 이거는 member에 있고 셀러인지 여부도 0,1로 member에 있습니다

@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Y_Spotlight';
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+button {
+    font-family: 'IBMPlexSansKR-Regular','맑은 고딕';
+    background-color: rgb(0, 153, 255);
+    /* background-color: #fafafa; */
+    border-radius: 4px;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 1px;
+    border-color: white;
+}
+h1 {
+    font-family: 'IBMPlexSansKR-Regular','맑은 고딕';
+    font-size: 32px;
+}
+h2 {
+    font-family: 'IBMPlexSansKR-Regular','맑은 고딕';
+    font-size: 22px;
+}
+h3 {
+    font-family: 'IBMPlexSansKR-Regular','맑은 고딕';
+    font-size: 18px;
+}
+a,
+label,
+p,
+span {
+    font-family: 'IBMPlexSansKR-Regular','맑은 고딕';
+    font-size: 16px;
+}
+.logoLink {
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    width: 65px;
+    height: 65px;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+/* 
+.logo> {
+    width: 65px;
+    padding: 0;
+    margin: 0;
+    font-size:50px;
+    font-weight:bold;
+} */
